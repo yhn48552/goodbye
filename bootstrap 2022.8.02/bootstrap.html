@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {}
+
+        .container-fluid {}
+
+        @media (min-width:992px) {
+            .navbar {
+                background-color: transparent !important;
+
+            }
+        }
+
+        @media(min-width:992px) {
+            #banner {}
+
+            #banner .navbar-brand,
+            .nav-link {
+
+                color: black !important;
+            }
+        }
+
+        .navbar-brand,
+        .nav-link {
+            /* color: rgba(255, 255, 255, 0.7) !important;  */
+        }
+
+        /* #banner {
+            
+            height: 100vh;
+            background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url(./img/bg-masthead.jpg);
+            background-position: 50%;
+            background-size: cover;
+        } */
+
+        #banner .title {
+            color: white;
+            position: absolute;
+            top: 53%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-weight: 600;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* background-color: antiquewhite; */
+
+        }
+
+        .text {
+
+
+            font-size: 56px;
+            margin-bottom: 48px;
+        }
+
+        .text2 {
+            font-size: 1.2rem;
+            margin-bottom: 60px;
+            color: rgba(255, 255, 255, 0.7);
+            width: 84%;
+        }
+
+        .text3 {
+            /* padding: 1.25rem 2.25rem; */
+            background-color: #f4623a;
+            width: 200px;
+            margin: 0% 38%;
+            border-radius: 10rem;
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 21px 23px;
+        }
+
+        @media(min-width:1400px) {
+            #banner .title {
+
+                max-width: 900px;
+            }
+
+        }
+
+        @media(max-width:1258px) {
+            #banner .title {
+
+                width: 600px;
+            }
+
+            .text {
+                font-size: 50px;
+            }
+
+        }
+
+        @media(max-width:990px) {
+            #banner {
+
+                height: auto;
+                
+            }
+
+            #banner .title {
+                top: 30%;
+                width: 76%;
+            }
+
+            .text {
+                font-size: 36px;
+            }
+
+            .text2 {
+                font-size: 20px;
+            }
+        }
+        .banner2{
+            height: 100vh;
+            background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url(./img/bg-masthead.jpg);
+            background-position: 50%;
+            background-size: cover;
+        }
+
+        /* .container2{
+            width: 100%;
+            background-color: rgb(14, 61, 102);
+            height: 50vh;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- <div class="container ">
+        <div class="row  ">
+            <div class="col-12 col-md-6 border border-dark ">123</div>
+            <div class="col-12 col-md-6  border border-dark" >456</div>
+            <div class="col-12 col-md-3 border border-dark">456</div>
+            <div class="col-6 col-md-6 border border-dark">456</div>
+            <div class="col-6 col-md-3 border border-dark">456</div>
+            <div class="col-12 border border-dark">456</div>
+            <div class="col-4  col-md-6 border border-dark">456</div>
+            <div class="col-4  col-md-6 border border-dark">456</div>
+            <div class="col-4   col-md-12 border border-dark">456</div>
+            <div class=" d-none col-12   d-md-block col-md-12 border border-dark">9879</div>
+        </div>
+        
+    </div> -->
+    <section id="banner">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light  position-fixed w-100 Start-0 top-0">
+            <div class="container-fluid col-8">
+                <a class="navbar-brand col-9 " href="#">Start Bootstrap</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse col-3" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ">
+                        <a class="nav-link active" aria-current="page" href="#">About</a>
+                        <a class="nav-link" href="#">Services</a>
+                        <a class="nav-link" href="#">Portfolio</a>
+                        <a class="nav-link" href="#">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="banner2">
+            <div class="title">
+                <h1 class="text">Your Favorite Place for Free Bootstrap Themes</h1>
+                <p class="text2">Start Bootstrap can help you build better websites using the Bootstrap framework! Just
+                    download a theme and start customizing, no strings attached!</p>
+                <div class="text3">FIND OUT MORE</div>
+            </div>
+        </div>
+
+    </section>
+
+    <section>
+        <div class="container2"></div>
+    </section>
+
+    <!-- <img src="./img/bg-masthead.jpg" alt=""> -->
+    <script src="./bootstrap/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

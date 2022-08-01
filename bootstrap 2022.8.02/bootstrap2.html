@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <title>Document</title>
+    <style>
+        .title {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 271px;
+            flex-wrap: wrap;
+        }
+
+        .banner2 {
+            height: 100vh;
+            min-height: 40rem;
+            padding-top: 4.5rem;
+            padding-bottom: 0;
+            background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url(./img/bg-masthead.jpg);
+            background-position: 50%;
+            background-size: cover;
+        }
+
+        @media(max-width:990px) {
+            .banner2 {
+                height: auto;
+                padding: 108px 0;
+            }
+
+            .title {
+                padding-top: 130px;
+            }
+
+            .text {
+                width: 100%;
+            }
+
+            .text-all {
+                width: 100%;
+            }
+
+            #banner .navbar .navbar-color{
+                color: #000!important;
+            }
+
+            #banner .navbar{
+                height: auto;
+            }
+
+        }
+
+        @media (min-width:992px) {
+            .navbar {
+                background-color: transparent !important;
+               
+            }
+            
+        }
+
+        .navbar {
+            opacity: 0.9;
+            height: 73px;
+            color: #ffffff;
+            z-index: 3;
+        }
+
+        .navbar-color {
+            color: rgba(255, 255, 255, 0.7) !important;
+            font-weight: 800;
+            font-family: serif;
+        }
+
+        .navbar-color:hover {
+            color: white !important;
+        }
+
+        .navbar-color.black {
+            color: black !important;
+
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.7) !important;
+        }
+
+        .nav-link:hover {
+            color: white !important;
+        }
+
+        .nav-link.black {
+            color: black !important;
+        }
+
+        .navbar.active {
+            background-color: #ffffff !important;
+            opacity: 1;
+            transition: all .2s;
+        }
+
+        .text {
+            /* margin-bottom: 50px; */
+            color: white;
+        }
+
+        .text2 {
+            margin-bottom: 3rem;
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 1.15rem;
+            font-weight: 700;
+        }
+
+        .btn {
+            background-color: #f4623a;
+            padding: 1.25rem 2.25rem;
+            font-size: 0.85rem;
+            font-weight: 700;
+            border-radius: 10rem;
+            color: #fff;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+
+        .divider {
+            max-width: 3.25rem;
+            height: 0.2rem !important;
+            margin: 1.5rem auto;
+            background-color: #fff;
+            opacity: 1;
+            background-color: #f4623a;
+        }
+
+        .divider2 {
+            max-width: 3.25rem;
+            height: 0.2rem !important;
+            margin: 1.5rem auto;
+            background-color: #fff;
+            opacity: 1;
+        }
+
+
+        #banner3 {
+            padding: 8rem 0;
+            background-color: #f4623a;
+
+        }
+
+        .title2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .btn2 {
+            color: #000;
+            background-color: #f9fafb;
+            border-color: #f9fafb;
+        }
+
+        .text4 {
+            margin-bottom: 1.5rem;
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 0 3%;
+        }
+
+        #page {
+            padding: 8rem 0;
+        }
+
+        #page2 {
+            background-color: #212529;
+            padding: 8rem 0;
+        }
+
+        h2 {
+            color: #ffffff;
+        }
+
+        .btn3 {
+            color: #000;
+            background-color: #f8f9fa;
+        }
+
+        .portfolio-box {
+            position: relative;
+        }
+
+        .jump {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+
+        }
+
+        .portfolio-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .portfolio-box:hover {
+            background-color: #f4623a;
+
+        }
+
+        .img-fluid:hover {
+            transition: all .3s;
+            opacity: 0.1;
+
+        }
+
+        .img-fluid:hover~.jump {
+
+            color: #ffffff;
+            opacity: 1 !important;
+        }
+
+        .modal-footer {
+            border: 0;
+        }
+
+        .pos {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            transform: translateY(-100%);
+            padding: 0 30px;
+        }
+
+        .modal-content {
+            top: 18%;
+            transform: translateX(-18%);
+        }
+
+        .modal-body {
+            width: 136%;
+
+        }
+
+        .img-fluid-1 {
+            margin-bottom: 40px;
+        }
+
+        .text {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.4em;
+            font-weight: 800;
+
+        }
+
+        .modal-header {
+            width: 136%;
+        }
+
+        .btn-modal {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 20px !important;
+            font-weight: 800;
+
+        }
+
+        .fs {
+            font-size: 32px;
+            cursor: pointer;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .fw {
+            font-size: 13px;
+            font-weight: 800;
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+
+        .navbar-nav {
+            font-size: 17px;
+        }
+
+        .big {
+            font-size: 55px;
+            font-weight: 800;
+            color: white;
+        }
+
+        .fw-2 {
+            font-weight: 800;
+        }
+
+        .bi-gem {
+            color: rgb(244, 98, 58) !important;
+        }
+
+        #page3 {
+            padding: 8rem 0;
+            padding-bottom: 70px;
+        }
+
+        
+
+        .input {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .btn4 {
+            width: 100%;
+        }
+
+        .message {
+            height: 10rem !important;
+        }
+
+        .center {
+            height: 120px;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .ready {
+           display: flex;
+           justify-content: center;
+           text-align: center;
+        }
+        
+    </style>
+</head>
+
+
+<body>
+    <section id="banner">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light  position-fixed w-100 Start-0 top-0">
+            <div class="container-fluid col-8">
+                <a class="navbar-brand col-9  navbar-color fs-4" href="#start">Start Bootstrap</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse col-3" id="navbarNavAltMarkup">
+                    <div class="navbar-nav navbar-color ">
+                        <a class="nav-link " href="#banner3">About</a>
+                        <a class="nav-link " href="#page">Services</a>
+                        <a class="nav-link " href="#photo">Portfolio</a>
+                        <a class="nav-link " href="#page2">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="start" class="banner2">
+            <div class="container h-100">
+                <div class="row title">
+                    <div class="col-8 text">
+                        <h1 class="big">Your Favorite Place for Free Bootstrap Themes</h1>
+                        <hr class="divider">
+                    </div>
+                    <div class="col-8 text-all">
+                        <p class="text2"> Start Bootstrap can help you build better websites using the Bootstrap
+                            framework! Just download a theme and start customizing, no strings attached!</p>
+                        <a class='btn' href="#banner3">FIND OUT MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="banner3">
+        <div class="container">
+            <div class="row title2">
+                <div class="col-8 ">
+                    <h2 class="text fs-2 text-white">We've got what you need!</h2>
+                    <hr class="divider2">
+                    <p class="text4">Start Bootstrap has everything you need to get your new website up and running in
+                        no time! Choose one of our open source, free to download, and easy to use themes! No strings
+                        attached!</p>
+                    <a class="btn btn2" href="#page">GET STARTED</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="page">
+        <div class="container">
+            <h2 class="text-center text-black fw-2">At Your Service</h2>
+            <hr class="divider">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2">
+                            <i class="bi-gem fs-1 text-primary "></i>
+                        </div>
+                        <h3>Sturdy Themes</h3>
+                        <p class="opacity-75 ">Our themes are updated regularly to keep them bug free!</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2">
+                            <i class="bi-gem  bi-laptop fs-1 text-primary "></i>
+                        </div>
+                        <h3>Up to Date</h3>
+                        <p class="opacity-75">All dependencies are kept current to keep things fresh.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2">
+                            <i class="bi-gem  bi-globe fs-1 text-primary "></i>
+                        </div>
+                        <h3>Ready to Publish</h3>
+                        <p class="opacity-75">You can use this design as is, or you can make changes!</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2">
+                            <i class="bi-gem  bi-heart fs-1 text-primary "></i>
+                        </div>
+                        <h3>Made with Love</h3>
+                        <p class="opacity-75">Is it really open source if it's not made with love?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <section id="photo">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 p-0 ">
+                    <a class="portfolio-box" data-bs-toggle="modal" href="#exampleModalToggle" role="button">
+                        <img class="img-fluid" src="./img/1.jpg" alt="">
+                        <div class="jump opacity-0">
+                            <div class="opacity-75 fs-9 fw">CATEGORY</div>
+                            <div class="fs-5 fw-bolder">Project Name</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6 p-0">
+                    <a class="portfolio-box" data-bs-toggle="modal" href="#exampleModalToggle2" role="button">
+                        <img class="img-fluid" src="./img/2.jpg" alt="">
+                        <div class="jump opacity-0">
+                            <div class="opacity-75 fs-9 fw">CATEGORY</div>
+                            <div class="fs-5 fw-bolder">Project Name</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6 p-0">
+                    <a class="portfolio-box" data-bs-toggle="modal" href="#exampleModalToggle3" role="button">
+                        <img class="img-fluid" src="./img/3.jpg" alt="">
+                        <div class="jump opacity-0">
+                            <div class="opacity-75 fs-9 fw">CATEGORY</div>
+                            <div class="fs-5 fw-bolder">Project Name</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6 p-0">
+                    <a class="portfolio-box" data-bs-toggle="modal" href="#exampleModalToggle4" role="button">
+                        <img class="img-fluid" src="./img/4.jpg" alt="">
+                        <div class="jump opacity-0">
+                            <div class="opacity-75 fs-9 fw">CATEGORY</div>
+                            <div class="fs-5 fw-bolder">Project Name</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6 p-0">
+                    <a class="portfolio-box" data-bs-toggle="modal" href="#exampleModalToggle5" role="button">
+                        <img class="img-fluid" src="./img/5.jpg" alt="">
+                        <div class="jump opacity-0">
+                            <div class="opacity-75 fs-9 fw">CATEGORY</div>
+                            <div class="fs-5 fw-bolder">Project Name</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6 p-0">
+                    <a class="portfolio-box" data-bs-toggle="modal" href="#exampleModalToggle6" role="button">
+                        <img class="img-fluid" src="./img/6.jpg" alt="">
+                        <div class="jump opacity-0">
+                            <div class="opacity-75 fs-9 fw">CATEGORY</div>
+                            <div class="fs-5 fw-bolder">Project Name</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="page2">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12">
+                    <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
+                    <a class="btn btn3" href="">DOWNLOAD NOW!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="page3">
+        <div class="container">
+            <div class="col-12 fs-2 fw-bold text-center">Let's Get In Touch!</div>
+            <hr class="divider">
+            <div class="col-12 mb-5  ready ">
+                <div class="col-6 ">Ready to start your next project with us? Send us a messages and we will get back to you as soon as possible!</div>
+            </div>
+            <div class="input   mb-5 col-12 ">
+                <div class="col-lg-6 col-12 ">
+                    <form class="form-floating   mb-4">
+                        <input type="email" class="form-control is-invalid" id="floatingInputInvalid"
+                            placeholder="name@example.com" value="">
+                        <label for="floatingInputInvalid">Full name</label>
+                    </form>
+                    <form class="form-floating   mb-4">
+                        <input type="email" class="form-control is-invalid" id="floatingInputInvalid"
+                            placeholder="name@example.com" value="">
+                        <label for="floatingInputInvalid">Email address</label>
+                    </form>
+                    <form class="form-floating   mb-4">
+                        <input type="email" class="form-control is-invalid" id="floatingInputInvalid"
+                            placeholder="name@example.com" value="">
+                        <label for="floatingInputInvalid">Phone number</label>
+                    </form>
+                    <form class="form-floating  mb-5">
+                        <input type="email" class="form-control is-invalid message" id="floatingInputInvalid"
+                            placeholder="name@example.com" value="">
+                        <label for="floatingInputInvalid">Message</label>
+                    </form>
+                    <a class="btn btn4 mb-5" href="">SUBMIT</a>
+                    <div class="col-lg-12 text-center">
+                        <i class="bi bi-phone fs-2 "></i>
+                        <div class=" ">+1 (555) 123-4567</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer">
+        <div class="container-fluid center">
+            <div class="col-12 ">
+                <div class="center">Copyright © 2022 - Company Name</div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="modal fade boder-0" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered border-0  ">
+            <div class="modal-content bg-transparent  border-0  position-absolute w-100 h-100">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="exampleModalToggleLabel"></h5>
+                    <p type="button" class="btn-close btn-modal" data-bs-dismiss="modal" aria-label="Close"></p>
+                </div>
+                <div class="modal-body   ">
+                    <img class="img-fluid-1" src="./img/1.jpg" alt="">
+                    <h3 class='text-center text'>Project Name</h3>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+        <div class="pos">
+            <p class="" data-bs-target="#exampleModalToggle6" data-bs-toggle="modal"><i
+                    class="bi bi-caret-left-fill fs"></i></p>
+            <p class="" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"><i
+                    class="bi bi-caret-right-fill fs"></i></p>
+        </div>
+    </div>
+
+    <div class="modal fade boder-0" id="exampleModalToggle2" aria-hidden="true"
+        aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered border-0  ">
+            <div class="modal-content bg-transparent  border-0  position-absolute w-100 h-100">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="exampleModalToggleLabel2"></h5>
+                    <p type="button" class="btn-close btn-modal" data-bs-dismiss="modal" aria-label="Close"></p>
+                </div>
+                <div class="modal-body   ">
+                    <img class="img-fluid-1" src="./img/2.jpg" alt="">
+                    <h3 class='text-center text'>Project Name</h3>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+        <div class="pos">
+            <p class="" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"><i
+                    class="bi bi-caret-left-fill fs"></i></p>
+            <p class="" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal"><i
+                    class="bi bi-caret-right-fill fs"></i></p>
+        </div>
+    </div>
+
+    <div class="modal fade boder-0" id="exampleModalToggle3" aria-hidden="true"
+        aria-labelledby="exampleModalToggleLabel3" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered border-0  ">
+            <div class="modal-content bg-transparent  border-0  position-absolute w-100 h-100">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="exampleModalToggleLabel3"></h5>
+                    <p type="button" class="btn-close btn-modal" data-bs-dismiss="modal" aria-label="Close"></p>
+                </div>
+                <div class="modal-body   ">
+                    <img class="img-fluid-1" src="./img/3.jpg" alt="">
+                    <h3 class='text-center text'>Project Name</h3>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+        <div class="pos">
+            <p class="" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"><i
+                    class="bi bi-caret-left-fill fs"></i></p>
+            <p class="" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal"><i
+                    class="bi bi-caret-right-fill fs"></i></p>
+        </div>
+    </div>
+
+    <div class="modal fade boder-0" id="exampleModalToggle4" aria-hidden="true"
+        aria-labelledby="exampleModalToggleLabel4" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered border-0  ">
+            <div class="modal-content bg-transparent  border-0  position-absolute w-100 h-100">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="exampleModalToggleLabel4"></h5>
+                    <p type="button" class="btn-close btn-modal" data-bs-dismiss="modal" aria-label="Close"></p>
+                </div>
+                <div class="modal-body   ">
+                    <img class="img-fluid-1" src="./img/4.jpg" alt="">
+                    <h3 class='text-center text'>Project Name</h3>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+        <div class="pos">
+            <p class="" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal"><i
+                    class="bi bi-caret-left-fill fs"></i></p>
+            <p class="" data-bs-target="#exampleModalToggle5" data-bs-toggle="modal"><i
+                    class="bi bi-caret-right-fill fs"></i></p>
+        </div>
+    </div>
+
+    <div class="modal fade boder-0" id="exampleModalToggle5" aria-hidden="true"
+        aria-labelledby="exampleModalToggleLabel5" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered border-0  ">
+            <div class="modal-content bg-transparent  border-0  position-absolute w-100 h-100">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="exampleModalToggleLabel5"></h5>
+                    <p type="button" class="btn-close btn-modal" data-bs-dismiss="modal" aria-label="Close"></p>
+                </div>
+                <div class="modal-body   ">
+                    <img class="img-fluid-1" src="./img/5.jpg" alt="">
+                    <h3 class='text-center text'>Project Name</h3>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+        <div class="pos">
+            <p class="" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal"><i
+                    class="bi bi-caret-left-fill fs"></i></p>
+            <p class="" data-bs-target="#exampleModalToggle6" data-bs-toggle="modal"><i
+                    class="bi bi-caret-right-fill fs"></i></p>
+        </div>
+    </div>
+
+    <div class="modal fade boder-0" id="exampleModalToggle6" aria-hidden="true"
+        aria-labelledby="exampleModalToggleLabel6" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered border-0  ">
+            <div class="modal-content bg-transparent  border-0  position-absolute w-100 h-100">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="exampleModalToggleLabel6"></h5>
+                    <p type="button" class="btn-close btn-modal" data-bs-dismiss="modal" aria-label="Close"></p>
+                </div>
+                <div class="modal-body   ">
+                    <img class="img-fluid-1" src="./img/6.jpg" alt="">
+                    <h3 class='text-center text'>Project Name</h3>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+        <div class="pos">
+            <p class="" data-bs-target="#exampleModalToggle5" data-bs-toggle="modal"><i
+                    class="bi bi-caret-left-fill fs"></i></p>
+            <p class="" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"><i
+                    class="bi bi-caret-right-fill fs"></i></p>
+        </div>
+    </div>
+
+    <script src="./bootstrap/js/bootstrap.bundle.js"></script>
+    <script>
+        const navbar = document.querySelector('.navbar')
+        const navbarColor = document.querySelector('.navbar-color')
+        const navlink = document.querySelectorAll('.nav-link')
+
+        console.log(navbarColor);
+        console.log(navlink);
+
+        window.addEventListener('scroll', function () {
+
+            if (window.scrollY > 60 ) {
+                navbar.classList.add('active')
+                navbarColor.classList.add('black')
+                navlink.forEach(function (nav) {
+                    console.log(navlink);
+                    nav.classList.add('black')
+
+                })
+
+            } else if (window.scrollY > 0) {
+                navbar.classList.remove('active')
+                navlink.forEach(function (nav) {
+                    console.log(nav);
+                    nav.classList.remove('black')
+                    navbarColor.classList.remove('black')
+                })
+            }
+
+        })
+    </script>
+</body>
+
+</html>
